@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 05 JavaScript</title>
+    <script>
+
+        let intervalo = alert('Escolha o intervalo dos números');
+        const min = prompt('Escolha o menor número do intervalo:');
+        const max = prompt('Escolha o maior número do intervalo');
+        const randomNum = Math.floor(Math.random() * (max - min + 1) + min);
+        let tentativas = 1;
+
+        do {
+            var palpite = prompt('Qual é o seu palpite?');
+            if (randomNum < palpite) {
+                alert('Seu palpite foi alto, tente algum número menor.\nNúmero de tentativas: ' + tentativas++)
+            } else if (randomNum > palpite) {
+                alert('Seu palpite foi baixo, tente algum número maior.\nNúmero de tentativas: ' + tentativas++)
+            } else {
+                alert('Parabéns!! Seu palpite está correto. A resposta é ' + randomNum + '.')
+                break
+            }
+        } while (randomNum !== palpite);
+
+
+    </script>
+</head>
+<body>
+    <h1>Jogo adivinhação</h1>
+</body>
+</html>
